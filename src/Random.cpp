@@ -9,15 +9,13 @@ Random::Random()
 }
 
 
-void
-Random::setSeed(unsigned int s)
+void Random::setSeed(unsigned int s)
 {
    seed = s;
    srand(seed);
 }
 
-void
-Random::setSeedByTime()
+void Random::setSeedByTime()
 {
    time_t t;
    time(&t);
@@ -27,8 +25,7 @@ Random::setSeedByTime()
 
 // Retorna próximo número da seqüência pseudo-aleatória
 // (valores entre 0.0 e 1.0)
-double
-Random::nextDouble()
+double Random::nextDouble()
 {
    return (double) rand() / (double) RAND_MAX;
 }
